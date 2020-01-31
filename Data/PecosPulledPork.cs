@@ -4,10 +4,7 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    /// <summary>
-    /// A class representing the angry chicken entree
-    /// </summary>
-    public class AngryChicken
+    public class PecosPulledPork
     {
         /// <summary>
         /// The price of the entree
@@ -16,38 +13,34 @@ namespace CowboyCafe.Data
         {
             get
             {
-                return 5.99;
-            }          
+                return 5.88;
+            }
         }
 
         /// <summary>
-        /// The calories of the entree
+        /// The calories in the pulled pork
         /// </summary>
         public uint Calories
         {
             get
             {
-                return 190;
+                return 528;
             }
-        }
-
-        private bool pickle = true;
-        /// <summary>
-        /// If the entree should be served with a pickle
-        /// </summary>
-        public bool Pickle
-        {
-            get { return pickle; }
-            set { pickle = value; }
         }
 
         /// <summary>
         /// If the entree should be served with bread
         /// </summary>
-        public bool Bread { get; set; } = true; 
+        public bool Bread { get; set; } = true;
+
+        private bool pickle = true;
+        /// <summary>
+        /// If the entree should be served with a pickle
+        /// </summary>
+        public bool Pickle { get; set; } = true;
 
         /// <summary>
-        /// THe special instructions for making the entree
+        /// The special instructions for making the entree
         /// </summary>
         public List<string> SpecialInstructions
         {
@@ -59,9 +52,6 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
-
-
-
 
 
 
