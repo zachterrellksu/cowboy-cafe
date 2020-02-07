@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+
+* Author: Nathan Bean 
+
+* Edited by: Zachary Terrell
+
+* Class name: Side.cs
+
+* Purpose: Represents the properties of sides
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

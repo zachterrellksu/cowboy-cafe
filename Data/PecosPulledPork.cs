@@ -1,15 +1,29 @@
-﻿using System;
+﻿/*
+
+* Author: Zachary Terrell 
+
+* Class name: PecosPulledPork.cs
+
+* Purpose: Represents the Pecos Pulled pork side
+
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class PecosPulledPork
+    /// <summary>
+    /// Represents the Pecos Pulled pork side
+    /// </summary>
+    public class PecosPulledPork: Entree
     {
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -20,7 +34,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The calories in the pulled pork
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -42,7 +56,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The special instructions for making the entree
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

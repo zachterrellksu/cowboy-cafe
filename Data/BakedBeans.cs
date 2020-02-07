@@ -2,12 +2,11 @@
 
 * Author: Zachary Terrell 
 
-* Class name: ChiliCheeseFries.cs
+* Class name: BakedBeans.cs
 
-* Purpose: Represents the Chili Cheese Fries side
+* Purpose: Represents the Baked Beans side
 
 */
-
 
 using System;
 using System.Collections.Generic;
@@ -16,9 +15,9 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// Represents the Chili Cheese Fries side
+    /// Represents the Baked Beans side
     /// </summary>
-    public class ChiliCheeseFries : Side
+    public class BakedBeans: Side
     {
         /// <summary>
         /// Calories in the side
@@ -30,11 +29,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 433;
+                        return 312;
                     case Size.Medium:
-                        return 524;
+                        return 378;
                     case Size.Large:
-                        return 610;
+                        return 410;
                     default:
                         throw new NotImplementedException();
                 }
@@ -51,16 +50,19 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 1.99;
+                        return 1.59;
                     case Size.Medium:
-                        return 2.99;
+                        return 1.79;
                     case Size.Large:
-                        return 3.99;
+                        return 1.99;
                     default:
                         throw new NotImplementedException();
                 }
             }
         }
-   
+
+
+
+
     }
 }

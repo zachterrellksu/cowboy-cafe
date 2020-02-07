@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: Zachary Terrell 
+
+* Class name: RustlersRibs.cs
+
+* Purpose: Represents the Rustler's Ribs pork entree
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,12 +17,12 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Ruslter's Ribs entree
     /// </summary>
-    public class RustlersRibs
+    public class RustlersRibs: Entree
     {
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -24,7 +34,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The calories in the ribs
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -35,7 +45,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The special instructions for making the entree
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get {
                 List<string> instructions = new List<string>();

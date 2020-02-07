@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: Zachary Terrell 
+
+* Class name: TrailBurger.cs
+
+* Purpose: Represents the Trail Burger entree
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,12 +17,12 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the trailburger entree
     /// </summary>
-    public class TrailBurger
+    public class TrailBurger: Entree
     {
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -23,7 +33,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The calories of the entree
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -59,7 +69,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The special instructions for making the entree
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
