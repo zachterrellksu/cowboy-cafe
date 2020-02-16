@@ -4,7 +4,7 @@
 
 * Class name: JerkedSoda.cs
 
-* Purpose: Represents the Jerked Soda
+* Purpose: Represents the Jerked Soda drink
 
 */
 
@@ -15,12 +15,18 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// Represents the flavors of soda
+    /// Represents the Jerked Soda drink
     /// </summary>
     public class JerkedSoda : Drink
     {
+        /// <summary>
+        /// Represents the flavor of the drink
+        /// </summary>
         public SodaFlavor Flavor { get; set; }
 
+        /// <summary>
+        /// The price of the drink
+        /// </summary>
         public override double Price 
         {
             get
@@ -39,6 +45,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// The calories in the drink
+        /// </summary>
         public override uint Calories
         {
             get
@@ -57,13 +66,15 @@ namespace CowboyCafe.Data
             }
         }
 
-
+        /// <summary>
+        /// The special instructions for making the drink
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) { instructions.Add("Hold ice"); }
+                if (!Ice) { instructions.Add("Hold Ice"); }
                 return instructions;
             }
         }

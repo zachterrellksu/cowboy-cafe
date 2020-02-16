@@ -47,37 +47,37 @@ namespace CowboyCafe.Data
         public bool Bun { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with ketchup
         /// </summary>
         public bool Ketchup { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with mustard
         /// </summary>
         public bool Mustard { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with pickle
         /// </summary>
         public bool Pickle { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with cheese
         /// </summary>
         public bool Cheese { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with tomato
         /// </summary>
         public bool Tomato { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with lettuce
         /// </summary>
         public bool Lettuce { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with mayo
         /// </summary>
         public bool Mayo { get; set; } = true;
 

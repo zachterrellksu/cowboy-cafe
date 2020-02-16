@@ -57,7 +57,7 @@ namespace CowboyCafe.Data
         public bool Bread { get; set; } = true; 
 
         /// <summary>
-        /// THe special instructions for making the entree
+        /// The special instructions for making the entree
         /// </summary>
         public override List<string> SpecialInstructions
         {

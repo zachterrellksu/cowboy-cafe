@@ -4,7 +4,7 @@
 
 * Class name: PandeCampo.cs
 
-* Purpose: Represents the Corn Dodgers side
+* Purpose: Represents the PanDeCampo side
 
 */
 
@@ -15,7 +15,7 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// Represents the Corn Dodgers side
+    /// Represents the PanDeCampo side
     /// </summary>
     public class PanDeCampo: Side
     {

@@ -15,7 +15,7 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// A class representing the trailburger entree
+    /// A class representing the Trail Burger entree
     /// </summary>
     public class TrailBurger: Entree
     {
@@ -47,22 +47,22 @@ namespace CowboyCafe.Data
         public bool Bun { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with ketchup
         /// </summary>
         public bool Ketchup { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with mustard
         /// </summary>
         public bool Mustard { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with pickle
         /// </summary>
         public bool Pickle { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with cheese
         /// </summary>
         public bool Cheese { get; set; } = true;
 

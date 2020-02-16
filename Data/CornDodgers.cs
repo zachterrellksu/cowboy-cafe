@@ -61,9 +61,5 @@ namespace CowboyCafe.Data
                 }
             }
         }
-
-
-
-
     }
 }

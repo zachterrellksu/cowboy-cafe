@@ -32,7 +32,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// The calories in the pulled pork
+        /// The calories in the entree
         /// </summary>
         public override uint Calories
         {

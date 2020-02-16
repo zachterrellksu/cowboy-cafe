@@ -32,7 +32,7 @@ namespace CowboyCafe.Data
 
 
         /// <summary>
-        /// The calories in the ribs
+        /// The calories in the entree
         /// </summary>
         public override uint Calories
         {
@@ -52,7 +52,5 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
-
-
     }
 }

@@ -15,7 +15,7 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// A class representing the texas triple entree
+    /// A class representing the Texas Triple entree
     /// </summary>
     public class TexasTripleBurger: Entree
     {
@@ -47,47 +47,47 @@ namespace CowboyCafe.Data
         public bool Bun { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with ketchup
         /// </summary>
         public bool Ketchup { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with mustard
         /// </summary>
         public bool Mustard { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with pickle
         /// </summary>
         public bool Pickle { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with cheese
         /// </summary>
         public bool Cheese { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with tomato
         /// </summary>
         public bool Tomato { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with lettuce
         /// </summary>
         public bool Lettuce { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with mayo
         /// </summary>
         public bool Mayo { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a bacon
+        /// If the entree should be served with bacon
         /// </summary>
         public bool Bacon { get; set; } = true;
 
         /// <summary>
-        /// If the entree should be served with a egg
+        /// If the entree should be served with an egg
         /// </summary>
         public bool Egg { get; set; } = true;
 
