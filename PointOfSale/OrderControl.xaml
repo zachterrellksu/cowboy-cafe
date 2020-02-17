@@ -22,7 +22,7 @@
         <StackPanel Grid.Column="0">
             <TextBlock TextAlignment="Center">Entree</TextBlock>
             <Button FontSize="3">Cowpoke Chili</Button>
-            <Button>Trail Burger</Button>
+            <Button Name="AddTrailBurgerButton">Trail Burger</Button>
         </StackPanel>
         <StackPanel Grid.Column = "1">
             <TextBlock>Side</TextBlock>
