@@ -11,6 +11,11 @@
             <Setter Property="Height" Value="50px"/>
             <Setter Property="FontSize" Value="18"/>
         </Style>
+        <Style TargetType ="TextBlock">
+            <Setter Property="Height" Value="50px"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -21,11 +26,22 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
             <TextBlock TextAlignment="Center">Entree</TextBlock>
-            <Button FontSize="3">Cowpoke Chili</Button>
-            <Button Name="AddTrailBurgerButton">Trail Burger</Button>
+            <Button Name="AddAngryChickenButton">Angry Chicken</Button>
+            <Button Name ="AddCowpokeChiliButton">Cowpoke Chili</Button>
+            <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
+            <Button Name="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
+            <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
+            <Button Name="AddTrailburgerButton">Trailburger</Button>
         </StackPanel>
         <StackPanel Grid.Column = "1">
-            <TextBlock>Side</TextBlock>
+            <TextBlock TextAlignment="Center">Side</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock TextAlignment="Center">Drink</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <TextBlock TextAlignment="Center">Order</TextBlock>
+            <ListView Name ="OrderListView"></ListView>
         </StackPanel>
     </Grid>
 </UserControl>
