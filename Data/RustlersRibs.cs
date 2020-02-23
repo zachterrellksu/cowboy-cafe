@@ -53,9 +53,12 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Displays item as a string
+        /// </summary>
         public override string ToString()
         {
-            return "Rustlers Ribs";
+            return "Rustler's Ribs";
         }
     }
 }

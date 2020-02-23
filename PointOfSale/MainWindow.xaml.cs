@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: Zachary Terrell 
+
+* Class name: OrderControl.xaml.cs
+
+* Purpose: Interaction logic for MainWindow.xaml
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

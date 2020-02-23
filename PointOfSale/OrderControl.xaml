@@ -30,14 +30,23 @@
             <Button Name ="AddCowpokeChiliButton">Cowpoke Chili</Button>
             <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
             <Button Name="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
+            <Button Name="AddRustlersRibsButton">Rustlers Ribs</Button>
             <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
-            <Button Name="AddTrailburgerButton">Trailburger</Button>
+            <Button Name="AddTrailburgerButton">Trail Burger</Button>
         </StackPanel>
         <StackPanel Grid.Column = "1">
             <TextBlock TextAlignment="Center">Side</TextBlock>
+            <Button Name ="AddBakedBeansButton">Baked Beans</Button>
+            <Button Name ="AddChiliCheeseFriesButton">Chili Cheese Fries</Button>
+            <Button Name ="AddCornDodgersButton">Corn Dodgers</Button>
+            <Button Name ="AddPanDeCampoButton">Pan de Campo</Button>
         </StackPanel>
         <StackPanel Grid.Column="2">
             <TextBlock TextAlignment="Center">Drink</TextBlock>
+            <Button Name ="AddCowboyCoffeeButton">Cowboy Coffee</Button>
+            <Button Name ="AddJerkedSodaButton">Jerked Soda</Button>
+            <Button Name ="AddTexasTeaButton">Texas Tea</Button>
+            <Button Name ="AddWaterButton">Water</Button>
         </StackPanel>
         <StackPanel Grid.Column="3">
             <TextBlock TextAlignment="Center">Order</TextBlock>

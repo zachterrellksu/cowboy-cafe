@@ -65,8 +65,11 @@ namespace CowboyCafe.Data
                 if (!Pickle) { instructions.Add("hold pickle"); }
                 return instructions;
             }
-        }//
+        }
 
+        /// <summary>
+        /// Displays item as a string
+        /// </summary>
         public override string ToString()
         {
             return "Pecos Pulled Pork";
