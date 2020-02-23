@@ -3,7 +3,7 @@
 * Author: Zachary Terrell 
 
 * Class name: AngryChicken.cs
-* 
+
 * Purpose: Represents the Angry Chicken entree
 
 */
