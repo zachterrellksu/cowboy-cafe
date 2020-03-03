@@ -18,7 +18,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Represents the base class of the drink
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink: IOrderItem
     {
         /// <summary>
         /// Gets the price of the drink
@@ -44,6 +44,5 @@ namespace CowboyCafe.Data
         /// The special instructions for making the drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get;}
-
     }
 }

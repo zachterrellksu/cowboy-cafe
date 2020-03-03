@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Zachary Terrell 
+
+* Class name: IOrderItem.cs
+
+* Purpose: Represents an order item
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,12 +18,14 @@ namespace CowboyCafe.Data
     /// </summary>
     public interface IOrderItem
     {
-        
-        double Price { get; set; }
+        /// <summary>
+        /// The price of the item
+        /// </summary>
+        double Price { get; }
 
         /// <summary>
         /// Special instructions for the order item
         /// </summary>
-        List<string> SpecialInstructions { get; set; }
+        List<string> SpecialInstructions { get;}
     }
 }
