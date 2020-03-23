@@ -11,6 +11,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 
 namespace CowboyCafe.Data
@@ -18,8 +19,13 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Represents the base class of the drink
     /// </summary>
-    public abstract class Drink: IOrderItem
+    public abstract class Drink: IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Gets the price of the drink
         /// </summary>
@@ -35,14 +41,115 @@ namespace CowboyCafe.Data
         /// </summary>
         public virtual Size Size{ get; set; } = Size.Small;
 
+        private bool ice = true;
         /// <summary>
         /// Gets and sets whether or not the drink has ice
         /// </summary>
-        public virtual bool Ice { get; set; } = true;
+        public virtual bool Ice 
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        /// <summary>
+        /// Condition for if the size is small
+        /// </summary>
+        public virtual bool Small
+        {
+            get
+            {
+                if (Size == Size.Small)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            set
+            {
+                if (value)
+                {
+                    Size = Size.Small;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Condition for if the size is small
+        /// </summary>
+        public virtual bool Medium
+        {
+            get
+            {
+                if (Size == Size.Medium)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            set
+            {
+                if (value)
+                {
+                    Size = Size.Medium;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Condition for if the size is small
+        /// </summary>
+        public virtual bool Large
+        {
+            get
+            {
+                if (Size == Size.Large)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            set
+            {
+                if (value)
+                {
+                    Size = Size.Large;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                }
+            }
+        }
 
         /// <summary>
         /// The special instructions for making the drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get;}
+
+        /// <summary>
+        /// Notifies order if property changes
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChange()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+        }
+
+        /// <summary>
+        /// Notifies order if property changes
+        /// </summary>
+        protected void NotifyOfFlavorChange()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
+        }
     }
 }

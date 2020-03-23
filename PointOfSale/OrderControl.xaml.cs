@@ -8,6 +8,7 @@
 
 */
 
+using CowboyCafe.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,7 +21,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CowboyCafe.Data;
+using CowboyCafe.Extensions;
 
 namespace PointOfSale
 {
@@ -30,40 +31,15 @@ namespace PointOfSale
     public partial class OrderControl : UserControl
     {
         /// <summary>
-        /// Initializes the components and assigns click event handler
+        /// Initializes the components and and assigns click event handler
         /// </summary>
         public OrderControl()
         {
             InitializeComponent();
+            ItemSelection.Click += OnItemSelectionButtonClicked;
             CancelOrder.Click += OnCancelOrderButtonClicked;
             CompleteOrder.Click += OnCompleteOrderButtonClicked;
-            ItemSelection.Click += OnItemSelectionButtonClicked;
-        }
-
-        /// <summary>
-        /// Click event handler for Cancel Order Button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
-        {
-            if(DataContext is Order data)
-            {
-                this.DataContext = new Order();
-            }
-        }
-
-        /// <summary>
-        /// Click event handler for Complete Order Button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data)
-            {
-                this.DataContext = new Order();
-            }
+            DataContext = new Order();
         }
 
         /// <summary>
@@ -73,20 +49,32 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnItemSelectionButtonClicked(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data)
-            {
-                //Not implemented
-            }
+            Container.Child = new MenuItemSelectionControl();
         }
 
-        private void ItemSelection_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Click event handler for Cancel Order Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            //Accidently double clicked, forgot how to delete without breaking code
+            this.DataContext = new Order();
         }
 
-        private void CompleteOrder_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Click event handler for Complete Order Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            //Accidently double clicked, forgot how to delete without breaking code
+            this.DataContext = new Order();
+        }
+
+        public void SwapScreen(UIElement element)
+        {
+            Container.Child = element;
         }
     }
 }

@@ -40,10 +40,23 @@ namespace CowboyCafe.Data
             }
         }
 
+        private bool sweet = true;
         /// <summary>
         /// If the tea should be sweet or not
         /// </summary>
-        public bool Sweet { get; set; } = true;
+        public bool Sweet
+        {
+            get
+            {
+                return sweet;
+            }
+            set
+            {
+                sweet = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
 
         /// <summary>
         /// The calories in the drink
@@ -83,10 +96,22 @@ namespace CowboyCafe.Data
             }
         }
 
+        private bool lemon = false;
         /// <summary>
         /// If the drink should contain lemon
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon
+        {
+            get
+            {
+                return lemon;
+            }
+            set
+            {
+                lemon = value;
+                NotifyOfPropertyChange();
+            }
+        }
 
         /// <summary>
         /// The special instructions for making the drink

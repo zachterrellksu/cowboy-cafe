@@ -80,6 +80,121 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
+        /// Gets if the flavor is Birch Beer
+        /// </summary>
+        public bool BirchBeer
+        {
+            get
+            {
+                if (Flavor == SodaFlavor.BirchBeer)
+                {
+                    return true;
+                }
+                return false;
+            }
+            set
+            {
+                if (value)
+                {
+                    Flavor = SodaFlavor.BirchBeer;
+                    NotifyOfFlavorChange();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets if the flavor is Cream Soda
+        /// </summary>
+        public bool CreamSoda
+        {
+            get
+            {
+                if (Flavor == SodaFlavor.CreamSoda)
+                {
+                    return true;
+                }
+                return false;
+            }
+            set
+            {
+                if (value)
+                {
+                    Flavor = SodaFlavor.CreamSoda;
+                    NotifyOfFlavorChange();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets if the flavor is Orange Soda
+        /// </summary>
+        public bool OrangeSoda
+        {
+            get
+            {
+                if (Flavor == SodaFlavor.OrangeSoda)
+                {
+                    return true;
+                }
+                return false;
+            }
+            set
+            {
+                if (value)
+                {
+                    Flavor = SodaFlavor.OrangeSoda;
+                    NotifyOfFlavorChange();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets if the flavor is Root Beer
+        /// </summary>
+        public bool RootBeer
+        {
+            get
+            {
+                if (Flavor == SodaFlavor.RootBeer)
+                {
+                    return true;
+                }
+                return false;
+            }
+            set
+            {
+                if (value)
+                {
+                    Flavor = SodaFlavor.RootBeer;
+                    NotifyOfFlavorChange();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets if the flavor is Sarsaparilla
+        /// </summary>
+        public bool Sarsparilla
+        {
+            get
+            {
+                if (Flavor == SodaFlavor.Sarsparilla)
+                {
+                    return true;
+                }
+                return false;
+            }
+            set
+            {
+                if (value)
+                {
+                    Flavor = SodaFlavor.Sarsparilla;
+                    NotifyOfFlavorChange();
+                }
+            }
+        }
+
+        /// <summary>
         /// Displays item as a string
         /// </summary>
         public override string ToString()

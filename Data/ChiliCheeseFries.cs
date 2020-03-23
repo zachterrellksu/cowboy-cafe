@@ -63,6 +63,11 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
+        /// Base implementation of SpecialInstructions 
+        /// </summary>
+        public override List<string> SpecialInstructions => new List<string>();
+
+        /// <summary>
         /// Displays item as a string
         /// </summary>
         public override string ToString()

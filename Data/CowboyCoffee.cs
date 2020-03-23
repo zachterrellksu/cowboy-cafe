@@ -61,20 +61,56 @@ namespace CowboyCafe.Data
             }
         }
 
+        private bool roomForCream = false;
         /// <summary>
         /// If the drink should contain room for cream
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream
+        {
+            get
+            {
+                return roomForCream;
+            }
+            set
+            {
+                roomForCream = value;
+                NotifyOfPropertyChange();
+            }
+        }
 
+        private bool ice = false;
         /// <summary>
         /// If the drink should contain ice
         /// </summary>
-        public bool Ice { get; set; } = false;
+        public override bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                NotifyOfPropertyChange();
+            }
+        }
 
+        private bool decaf;
         /// <summary>
         /// If the drink should be decaf
         /// </summary>
-        public bool Decaf { get; set; } = false;
+        public bool Decaf
+        {
+            get
+            {
+                return decaf;
+            }
+            set
+            {
+                decaf = value;
+                NotifyOfPropertyChange();
+            }
+        }
 
         /// <summary>
         /// The special instructions for making the drink
@@ -95,10 +131,14 @@ namespace CowboyCafe.Data
         /// </summary>
         public override string ToString()
         {
-            if(Decaf)
+            if (Decaf)
+            {
                 return $"{Size} Decaf Cowboy Coffee";
+            }
             else
+            {
                 return $"{Size} Cowboy Coffee";
+            }
         }
     }
 }

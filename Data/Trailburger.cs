@@ -41,30 +41,76 @@ namespace CowboyCafe.Data
             }
         }
 
+        private bool bun = true;
         /// <summary>
-        /// If the entree should be served with a bun
+        /// If the entree should be served with bread
         /// </summary>
-        public bool Bun { get; set; } = true;
+        public bool Bun
+        {
+            get { return bun; }
+            set
+            {
+                bun = value;
+                NotifyOfPropertyChange("Bread");
+            }
+        }
 
+        private bool ketchup = true;
         /// <summary>
         /// If the entree should be served with ketchup
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup
+        {
+            get { return ketchup; }
+            set
+            {
+                ketchup = value;
+                NotifyOfPropertyChange("Ketchup");
+            }
+        }
 
+        private bool mustard = true;
         /// <summary>
         /// If the entree should be served with mustard
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public bool Mustard
+        {
+            get { return mustard; }
+            set
+            {
+                mustard = value;
+                NotifyOfPropertyChange("Mustard");
+            }
+        }
 
+        private bool pickle = true;
         /// <summary>
-        /// If the entree should be served with pickle
+        /// If the entree should be served with a pickle
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                NotifyOfPropertyChange("Pickle");
+            }
+        }
 
+        private bool cheese = true;
         /// <summary>
         /// If the entree should be served with cheese
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public bool Cheese
+        {
+            get { return cheese; }
+            set
+            {
+                cheese = value;
+                NotifyOfPropertyChange("Cheese");
+            }
+        }
+
 
         /// <summary>
         /// The special instructions for making the entree
