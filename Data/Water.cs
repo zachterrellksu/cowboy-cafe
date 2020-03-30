@@ -54,7 +54,7 @@ namespace CowboyCafe.Data
             set
             {
                 lemon = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange("Lemon");
             }
         }
 

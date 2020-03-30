@@ -36,10 +36,24 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract uint Calories { get; }
 
+        Size size = Size.Small;
         /// <summary>
         /// Gets and sets the size of the drink
         /// </summary>
-        public virtual Size Size{ get; set; } = Size.Small;
+        public virtual Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            }
+        }
 
         private bool ice = true;
         /// <summary>
@@ -54,7 +68,7 @@ namespace CowboyCafe.Data
             set
             {
                 ice = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange("Ice");
             }
         }
 
@@ -139,8 +153,9 @@ namespace CowboyCafe.Data
         /// Notifies order if property changes
         /// </summary>
         /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChange()
+        protected void NotifyOfPropertyChange(string property)
         {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
         }
 

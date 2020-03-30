@@ -74,7 +74,7 @@ namespace CowboyCafe.Data
             set
             {
                 roomForCream = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange("RoomForCream");
             }
         }
 
@@ -91,11 +91,11 @@ namespace CowboyCafe.Data
             set
             {
                 ice = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange("Ice");
             }
         }
 
-        private bool decaf;
+        private bool decaf = false;
         /// <summary>
         /// If the drink should be decaf
         /// </summary>
@@ -108,7 +108,7 @@ namespace CowboyCafe.Data
             set
             {
                 decaf = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange("Decaf");
             }
         }
 
