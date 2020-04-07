@@ -22,6 +22,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Extensions;
+using CashRegister;
 
 namespace PointOfSale
 {
@@ -30,6 +31,11 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// Represents the single cash drawer
+        /// </summary>
+        static CashDrawer drawer = new CashDrawer();
+
         /// <summary>
         /// Initializes the components and and assigns click event handler
         /// </summary>
@@ -69,9 +75,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new Order();
+            var screen = new TransactionControl(drawer);
+            Main.Child = screen;
         }
 
+        /// <summary>
+        /// Swaps screen
+        /// </summary>
+        /// <param name="element"></param>
         public void SwapScreen(UIElement element)
         {
             Container.Child = element;

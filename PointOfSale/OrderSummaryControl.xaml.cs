@@ -172,11 +172,7 @@ namespace PointOfSale
                     var screen = new CustomizeWater();
                     screen.DataContext = item;
                     orderControl.SwapScreen(screen);
-                }
-                else
-                {
-                    throw new NotImplementedException();
-                }
+                }                
             }
         }
 

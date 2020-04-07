@@ -20,6 +20,12 @@ namespace CowboyCafe.Data
     /// </summary>
     public class Order: INotifyPropertyChanged
     {
+
+        public Order()
+        {
+            lastOrderNumber++;
+        }
+
         /// <summary>
         /// Holds items in order
         /// </summary>
@@ -28,7 +34,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Holds last order number
         /// </summary>
-        private static uint lastOrderNumber = 1;
+        private static uint lastOrderNumber = 0;
 
         /// <summary>
         /// Current Order number
@@ -37,7 +43,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                return lastOrderNumber++;
+                return lastOrderNumber;
             }
         }
 
@@ -59,6 +65,15 @@ namespace CowboyCafe.Data
                     sub += item.Price;
                 }
                 return sub;
+            }
+        }
+
+        public double Total
+        {
+            get
+            {
+                double tax = Subtotal * .16;
+                return Subtotal + tax;
             }
         }
 
