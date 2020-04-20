@@ -1,0 +1,116 @@
+﻿@page
+@using CowboyCafe.Data;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<body>
+    <header class="main-head">
+        <h1>Cowboy Cafe</h1>
+        <p>
+            We at Cowboy Cafe are proud to bring you authentic trail meals from the American West.
+            off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas.
+            Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger!
+            You’ve had a hard ride - so take it easy with us.
+        </p>
+    </header>
+    <main>
+        <section class="catagories">
+            <h2 id="entreecat">Entrees</h2>
+            <h2 id="sidescat">Sides</h2>
+            <h2 id="drinkscat">Drinks</h2>
+        </section>
+        <section class="items">
+            <div class="entrees">
+                @foreach (Entree entree in Menu.Entrees())
+                {
+                    <div class="menu-item">
+                        <h2 class="item-name">@entree.ToString()</h2>
+                        <h3 class="item-price">$@entree.Price</h3>
+                        <h3 class="item-calories">@entree.Calories cal.</h3>
+                    </div>
+                }
+            </div>
+            <div class="sides">
+                @foreach (Side side in Menu.Sides())
+                {
+                    <div class="menu-item">
+                        <h2 class="item-name">@side.ToString().Substring(6)</h2>
+                        @{
+                            side.Size = Size.Small;
+                        }
+                        <div class="small-size">
+                            <h3 class="size-descriptor">Small</h3>
+                            <h3 class="item-price">$@side.Price</h3>
+                            <h3 class="item-calories">@side.Calories cal.</h3>
+                        </div>
+                        @{
+                            side.Size = Size.Medium;
+                        }
+                        <div class="medium-size">
+                            <h3 class="size-descriptor">Medium</h3>
+                            <h3 class="item-price">$@side.Price</h3>
+                            <h3 class="item-calories">@side.Calories cal.</h3>
+                        </div>
+                        @{
+                            side.Size = Size.Large;
+                        }
+                        <div class="large-size">
+                            <h3 class="size-descriptor">Large</h3>
+                            <h3 class="item-price">$@side.Price</h3>
+                            <h3 class="item-calories">@side.Calories cal.</h3>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="drinks">
+                @foreach (Drink drink in Menu.Drinks())
+                {
+                <div class="menu-item">
+                    @{
+                        if (drink is TexasTea)
+                        {
+                            <h2 class="item-name">Texas Tea</h2>
+                        }
+                        else if (drink is JerkedSoda)
+                        {
+                            <h2 class="item-name">Jerked Soda</h2>
+                        }
+                        else
+                        {
+                            <h2 class="item-name">@drink.ToString().Substring(6)</h2>
+                        }
+                    }
+                    @{
+                        drink.Size = Size.Small;
+                    }
+                    <div class="small-size">
+                        <h3 class="size-descriptor">Small</h3>
+                        <h3 class="item-price">$@drink.Price</h3>
+                        <h3 class="item-calories">@drink.Calories cal.</h3>
+                    </div>
+                    @{
+                        drink.Size = Size.Medium;
+                    }
+                    <div class="medium-size">
+                        <h3 class="size-descriptor">Medium</h3>
+                        <h3 class="item-price">$@drink.Price</h3>
+                        <h3 class="item-calories">@drink.Calories cal.</h3>
+                    </div>
+                    @{
+                        drink.Size = Size.Large;
+                    }
+                    <div class="large-size">
+                        <h3 class="size-descriptor">Large</h3>
+                        <h3 class="item-price">$@drink.Price</h3>
+                        <h3 class="item-calories">@drink.Calories cal.</h3>
+                    </div>
+                </div>
+                }
+            </div>
+        </section>
+    </main>
+</body>
+
