@@ -1,7 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+/*
 
+* Author: Zachary Terrell 
+
+* Class name: Menu.cs
+
+* Purpose: Represents the menu
+
+*/
 namespace CowboyCafe.Data
 {
     public static class Menu
