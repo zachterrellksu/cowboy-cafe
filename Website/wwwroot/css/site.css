@@ -1,9 +1,13 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-*{
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+
 
 a.navbar-brand {
   white-space: normal;
@@ -12,7 +16,16 @@ a.navbar-brand {
 }
 
 /*Index Styles*/
-header.main-head h1{
+
+.main-grid-container {
+    display: grid;
+}
+
+header.main-head {
+    grid-row: 1/2;
+}
+
+header.main-head h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -21,18 +34,29 @@ header.main-head p {
     margin-bottom: 2rem;
 }
 
-.catagories{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;  
-    text-decoration: underline;
+.body-grid-container {
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.S-F{
+    grid-column: 1;
 }
 
 .items{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-bottom: 5rem;
+   grid-column: 2;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+#sidescat,
+#entreecat, 
+#drinkscat{
+    text-decoration: underline;
 }
 
 .menu-item{
@@ -41,23 +65,6 @@ header.main-head p {
 
 .size-descriptor{
     font-weight: 200;
-}
-
-.entrees{
-    flex: 1 auto;
-    margin-right: 3rem;
-    text-align: left;
-}
-
-.sides{
-    flex: 2 auto;
-    margin-right: 3rem;
-    text-align: center;
-}
-
-.drinks{
-    flex: 3 auto;
-    text-align: right;
 }
 
 
