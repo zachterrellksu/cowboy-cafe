@@ -50,20 +50,21 @@
                         <h4>Calories</h4>
                         <div>
                             Between
-                            <input name="cmin" type="number" min="0" max="1000" step="1" placeholder="min" value="@Model.CaloriesMin" />
+                            <input name="cmin" type="number" min="0" max="1000" step="1" placeholder="0" value="@Model.CaloriesMin" />
                             and
-                            <input name="cmax" type="number" min="0" max="1000" step="1" placeholder="max" value="@Model.CaloriesMax" />
+                            <input name="cmax" type="number" min="0" max="1000" step="1" placeholder="0" value="@Model.CaloriesMax" />
                         </div>
 
                         <h4>Price</h4>
                         <div>
                             Between
-                            <input name="pmin" type="number" min="0" max="50" step=".1" placeholder="min" value="@Model.PriceMin" />
+                            <input name="pmin" type="number" min="0" max="50" step=".1" placeholder="0" value="@Model.PriceMin" />
                             and
-                            <input name="pmax" type="number" min="0" max="50" step=".1" placeholder="max" value="@Model.PriceMax" />
+                            <input name="pmax" type="number" min="0" max="50" step=".1" placeholder="50" value="@Model.PriceMax" />
                         </div>
                     </div>
                 </section>
+
 
 
 
@@ -185,10 +186,31 @@
                                 </div>
                             }
                         }
+                        <section class="flavors">
+                            <h2 id="sodatitle">Jerked Soda Flavors</h2>
+                            <ul>
+                                <li>
+                                    <h3>Birch Beer</h3>
+                                </li>
+                                <li>
+                                    <h3>Cream Soda</h3>
+                                </li>
+                                <li>
+                                    <h3>Orange Soda</h3>
+                                </li>
+                                <li>
+                                    <h3>Root Beer</h3>
+                                </li>
+                                <li>
+                                    <h3>Sarsparilla</h3>
+                                </li>
+                            </ul>
+                        </section>
 
                     </div>
                 </section>
 
+               
             </div>
         </form>
     </main>
